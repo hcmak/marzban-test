@@ -75,8 +75,7 @@ echo "🔐 Получаем токен..."
 TOKEN_RESPONSE=$(curl -s -X POST https://$DOMAIN/api/admin/token \
   -H 'accept: application/json' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
-  -d username=$ADMIN_USER \
-  -d password=$ADMIN_PASS)
+  -d "username=$ADMIN_USER&password=$ADMIN_PASS")
 
 TOKEN=$(echo "$TOKEN_RESPONSE" | python3 -c "import sys, json; print(json.load(sys.stdin)['access_token'])")
 
