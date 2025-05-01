@@ -1,3 +1,5 @@
+# updated manually to force git diff
+
 #!/usr/bin/env bash
 
 # === НАСТРОЙКИ ===
